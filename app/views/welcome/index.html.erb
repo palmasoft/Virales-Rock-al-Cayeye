@@ -1,0 +1,239 @@
+
+
+<h3>Lo Más Visto</h3>
+<% if not @list_videos_mas_vistos.blank? then %>
+<div id="masvisto_tira_videos" class="owl-carousel" >
+	<% for iVid in @list_videos_mas_vistos %>
+		<% video = VideoInfo.new(  iVid.url_video  ) %>			
+		<% if video.available? then %>
+		<div>
+			<a href="/video/<%= iVid.url_publica_video %>" >
+				<img src="http://img.youtube.com/vi/<%= video.video_id %>/0.jpg" id="masvisto_vid_thub_1_<%= iVid.id %>" class="youtube_thumb masvisto_thmub<%= iVid.id %>" >
+			    <img src="http://img.youtube.com/vi/<%= video.video_id %>/1.jpg" id="masvisto_vid_thub_2_<%= iVid.id %>" class="youtube_thumb masvisto_thmub<%= iVid.id %>" >
+			    <img src="http://img.youtube.com/vi/<%= video.video_id %>/2.jpg" id="masvisto_vid_thub_3_<%= iVid.id %>" class="youtube_thumb masvisto_thmub<%= iVid.id %>" >
+			    <img src="http://img.youtube.com/vi/<%= video.video_id %>/3.jpg" id="masvisto_vid_thub_4_<%= iVid.id %>" class="youtube_thumb masvisto_thmub<%= iVid.id %>" >
+		      	<br />
+				<%= iVid.titulo_video %>
+			</a>
+			<script type="text/javascript">
+			var masvisto_iImagen<%= iVid.id %> = 1;
+			var masvisto_tTrans<%= iVid.id %> = 500 + Math.random() * 1500;
+			$( document ).ready(function() {
+				setInterval(function () {
+					$('.masvisto_thmub<%= iVid.id %>').hide();
+					$('#masvisto_vid_thub_'+masvisto_iImagen<%= iVid.id %>+'_<%= iVid.id %>').show();
+					masvisto_iImagen<%= iVid.id %>++;
+					if( masvisto_iImagen<%= iVid.id %> > 4) masvisto_iImagen<%= iVid.id %> = 1;
+				}, masvisto_tTrans<%= iVid.id %>);
+			    
+			});
+			</script>
+		</div>
+		<% end %>
+	<% end %>
+</div>
+<% end %>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Virales al Cayeye Banner Horiz 2 Pequeño -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:320px;height:50px"
+     data-ad-client="ca-pub-5163385221124664"
+     data-ad-slot="6646005970"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<hr />
+
+
+
+
+<h3>Lo Más Compartido</h3>
+
+<% if not @list_videos_mas_share.blank? then %>
+<div id="share_tira_videos" class="owl-carousel" >
+	<% for iVid in @list_videos_mas_share %>
+		<% video = VideoInfo.new(  iVid.url_video  ) %>			
+		<% if video.available? then %>
+		<div>
+			<a href="/video/<%= iVid.url_publica_video %>" >
+				<img src="http://img.youtube.com/vi/<%= video.video_id %>/0.jpg" id="share_vid_thub_1_<%= iVid.id %>" class="youtube_thumb share_thmub<%= iVid.id %>" >
+			    <img src="http://img.youtube.com/vi/<%= video.video_id %>/1.jpg" id="share_vid_thub_2_<%= iVid.id %>" class="youtube_thumb share_thmub<%= iVid.id %>" >
+			    <img src="http://img.youtube.com/vi/<%= video.video_id %>/2.jpg" id="share_vid_thub_3_<%= iVid.id %>" class="youtube_thumb share_thmub<%= iVid.id %>" >
+			    <img src="http://img.youtube.com/vi/<%= video.video_id %>/3.jpg" id="share_vid_thub_4_<%= iVid.id %>" class="youtube_thumb share_thmub<%= iVid.id %>" >
+		      	<br />
+				<%= iVid.titulo_video %>
+			</a>
+			<script type="text/javascript">
+			var share_iImagen<%= iVid.id %> = 1;
+			var share_tTrans<%= iVid.id %> = 500 + Math.random() * 1500;
+			$( document ).ready(function() {
+				setInterval(function () {
+					$('.share_thmub<%= iVid.id %>').hide();
+					$('#share_vid_thub_'+share_iImagen<%= iVid.id %>+'_<%= iVid.id %>').show();
+					share_iImagen<%= iVid.id %>++;
+					if( share_iImagen<%= iVid.id %> > 4) share_iImagen<%= iVid.id %> = 1;
+				}, share_tTrans<%= iVid.id %>);
+			    
+			});
+			</script>
+		</div>
+		<% end %>
+	<% end %>
+</div>
+<% end %>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Virales al Cayeye Banner Horiz 2 Pequeño -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:320px;height:50px"
+     data-ad-client="ca-pub-5163385221124664"
+     data-ad-slot="6646005970"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<hr />
+
+
+<h3>Lo Que Más Gusta</h3>
+<% if not @list_videos_mas_like.blank? then %>
+<div id="like_tira_videos" class="owl-carousel" >
+	<% for iVid in @list_videos_mas_like %>
+		<% video = VideoInfo.new(  iVid.url_video  ) %>			
+		<% if video.available? then %>
+		<div>
+			<a href="/video/<%= iVid.url_publica_video %>" >
+				<img src="http://img.youtube.com/vi/<%= video.video_id %>/0.jpg" id="like_vid_thub_1_<%= iVid.id %>" class="youtube_thumb like_thmub<%= iVid.id %>" >
+			    <img src="http://img.youtube.com/vi/<%= video.video_id %>/1.jpg" id="like_vid_thub_2_<%= iVid.id %>" class="youtube_thumb like_thmub<%= iVid.id %>" >
+			    <img src="http://img.youtube.com/vi/<%= video.video_id %>/2.jpg" id="like_vid_thub_3_<%= iVid.id %>" class="youtube_thumb like_thmub<%= iVid.id %>" >
+			    <img src="http://img.youtube.com/vi/<%= video.video_id %>/3.jpg" id="like_vid_thub_4_<%= iVid.id %>" class="youtube_thumb like_thmub<%= iVid.id %>" >
+		      	<br />
+				<%= iVid.titulo_video %>
+			</a>
+			<script type="text/javascript">
+			var like_iImagen<%= iVid.id %> = 1;
+			var like_tTrans<%= iVid.id %> = 500 + Math.random() * 1500;
+			$( document ).ready(function() {
+				setInterval(function () {
+					$('.like_thmub<%= iVid.id %>').hide();
+					$('#like_vid_thub_'+like_iImagen<%= iVid.id %>+'_<%= iVid.id %>').show();
+					like_iImagen<%= iVid.id %>++;
+					if( like_iImagen<%= iVid.id %> > 4) like_iImagen<%= iVid.id %> = 1;
+				}, like_tTrans<%= iVid.id %>);
+			    
+			});
+			</script>
+		</div>
+		<% end %>
+	<% end %>
+</div>
+<% end %>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Virales al Cayeye Banner Horiz 2 Pequeño -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:320px;height:50px"
+     data-ad-client="ca-pub-5163385221124664"
+     data-ad-slot="6646005970"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<hr />
+
+
+
+
+<h3>Lo Que Más No Gusta</h3>
+<% if not @list_videos_mas_nolike.blank? then %>
+<div id="nolike_tira_videos" class="owl-carousel" >
+	<% for iVid in @list_videos_mas_nolike %>
+		<% video = VideoInfo.new(  iVid.url_video  ) %>			
+		<% if video.available? then %>
+		<div>
+			<a href="/video/<%= iVid.url_publica_video %>" >
+				<img src="http://img.youtube.com/vi/<%= video.video_id %>/0.jpg" id="nolike_vid_thub_1_<%= iVid.id %>" class="youtube_thumb nolike_thmub<%= iVid.id %>" >
+			    <img src="http://img.youtube.com/vi/<%= video.video_id %>/1.jpg" id="nolike_vid_thub_2_<%= iVid.id %>" class="youtube_thumb nolike_thmub<%= iVid.id %>" >
+			    <img src="http://img.youtube.com/vi/<%= video.video_id %>/2.jpg" id="nolike_vid_thub_3_<%= iVid.id %>" class="youtube_thumb nolike_thmub<%= iVid.id %>" >
+			    <img src="http://img.youtube.com/vi/<%= video.video_id %>/3.jpg" id="nolike_vid_thub_4_<%= iVid.id %>" class="youtube_thumb nolike_thmub<%= iVid.id %>" >
+		      	<br />
+				<%= iVid.titulo_video %>
+			</a>
+			<script type="text/javascript">
+			var nolike_iImagen<%= iVid.id %> = 1;
+			var nolike_tTrans<%= iVid.id %> = 500 + Math.random() * 1500;
+			$( document ).ready(function() {
+				setInterval(function () {
+					$('.nolike_thmub<%= iVid.id %>').hide();
+					$('#nolike_vid_thub_'+nolike_iImagen<%= iVid.id %>+'_<%= iVid.id %>').show();
+					nolike_iImagen<%= iVid.id %>++;
+					if( nolike_iImagen<%= iVid.id %> > 4) nolike_iImagen<%= iVid.id %> = 1;
+				}, nolike_tTrans<%= iVid.id %>);
+			    
+			});
+			</script>
+		</div>
+		<% end %>
+	<% end %>
+</div>
+<% end %>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Virales al Cayeye Banner Horiz 2 Pequeño -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:320px;height:50px"
+     data-ad-client="ca-pub-5163385221124664"
+     data-ad-slot="6646005970"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+$( document ).ready(function() {
+	$(".owl-carousel").owlCarousel({		
+	    
+	    itemsDesktop : [1199,6],
+	    itemsDesktopSmall : [980,5],
+	    itemsTablet: [768,3],
+	    itemsTabletSmall: [600,2],
+	    itemsMobile : [479,1],
+	    singleItem : false,
+	    itemsScaleUp : false,
+
+		//Basic Speeds
+	    slideSpeed : 200,
+	    paginationSpeed : 800,
+	    rewindSpeed : 1000,
+	 
+	    //Autoplay
+	    autoPlay : true,
+	    stopOnHover : true,
+	 
+	    // Navigation
+	    navigation : true,
+	    navigationText : ["Anterior","Siguiente"],
+	    rewindNav : true,
+	    scrollPerPage : true,
+
+	    //Pagination
+	    pagination : true,
+	    paginationNumbers: true
+	});
+});
+</script>

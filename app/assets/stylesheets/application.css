@@ -1,0 +1,209 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *
+ */
+/*
+ *= require froala_editor.min.css
+ *= require froala_style.min.css
+ *= require font-awesome.css
+ */
+
+/*
+ *= require owl.carousel
+ *= require owl.theme
+ */
+
+            /* Default Facebook CSS */
+            .fbbody
+            {
+                font-family: "lucida grande" ,tahoma,verdana,arial,sans-serif;
+                font-size: 11px;
+                color: #333333;
+                text-align: center;
+            }
+            /* Default Anchor Style */
+            .fbbody a
+            {
+                color: #3b5998;
+                outline-style: none;
+                text-decoration: none;
+                /*font-size: 11px;*/
+                font-weight: bold;
+            }
+            .fbbody a:hover
+            {
+                text-decoration: underline;
+            }
+            /* Facebook Box Styles */
+            .fbgreybox
+            {
+                background-color: #f7f7f7;
+                border: 1px solid #cccccc;
+                color: #333333;
+                padding: 10px;
+                font-size: 13px;
+                font-weight: bold;
+            }
+            .fbbluebox
+            {
+                background-color: #eceff6;
+                border: 1px solid #d4dae8;
+                color: #333333;
+                padding: 10px;
+                font-size: 13px;
+                font-weight: bold;
+            }
+            .fbinfobox
+            {
+                background-color: #fff9d7;
+                border: 1px solid #e2c822;
+                color: #333333;
+                padding: 10px;
+                font-size: 13px;
+                font-weight: bold;
+            }
+            .fberrorbox
+            {
+                background-color: #ffebe8;
+                border: 1px solid #dd3c10;
+                color: #333333;
+                padding: 10px;
+                font-size: 13px;
+                font-weight: bold;
+            }
+            /* Content Divider on White Background */
+            .fbcontentdivider
+            {
+                margin-top: 15px;
+                margin-bottom: 15px;
+                width: 520px;
+                height: 1px;
+                background-color: #d8dfea;
+            }
+            /* Facebook Tab Style */
+            .fbtab
+            {
+                padding: 8px;
+                background-color: #d8dfea;
+                color: #3b5998;
+                font-weight: bold;
+                float: left;
+                margin-right: 4px;
+                text-decoration: none;
+            }
+            .fbtab:hover
+            {
+                background-color: #3b5998;
+                color: #ffffff;
+                cursor: hand;
+            }
+        
+
+
+
+nav ul {
+    list-style: none;
+    height: 40px;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 0.2em;
+}
+
+nav ul li a {
+    margin: 0;
+    padding: 1em;
+    text-decoration: none;
+}
+nav ul li a:hover {
+    border: thin black solid;
+}
+
+
+
+
+
+
+.mensaje_info, .mensaje_success, .mensaje_warning, .mensaje_error {
+    margin: 10px 0px;
+    padding:12px;
+}
+.mensaje_info {
+    color: #00529B;
+    background-color: #BDE5F8;
+}
+.mensaje_success {
+    color: #4F8A10;
+    background-color: #DFF2BF;
+}
+.mensaje_warning {
+    color: #9F6000;
+    background-color: #FEEFB3;
+}
+.mensaje_error {
+    color: #D8000C;
+    background-color: #FFBABA;
+}
+.mensaje_info i, .mensaje_success i, .mensaje_warning i, .mensaje_error i {
+    margin:10px 22px;
+    font-size:2em;
+    vertical-align:middle;
+}
+
+
+
+#tira_videos {
+    list-style: none;
+}
+
+#tira_videos > li {
+    display: inline-block;
+    text-align: center;
+    vertical-align: text-top;
+    
+}
+
+#tira_videos li a img{
+    
+}
+
+.youtube_thumb {
+    display: _none;
+    height: 124px;
+}
+
+
+
+
+.tabla-videos div {
+    display: inline-table;
+    max-width: 190px;
+    max-height: 230px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

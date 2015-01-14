@@ -1,0 +1,69 @@
+
+
+
+
+<% for iCat in @list_categorias %>
+
+<h2><a href="videos/<%= iCat.url_publica_categoria %>" ><%= iCat.titulo_categoria %></a></h2>
+<p><%= iCat.desc_categoria %></p>
+
+
+<ul id="tira_videos" class="owl-carousel" >
+	<% for iVid in @list_videos %>
+		<% if iVid.categoria_video == iCat.id %>
+		<% video = VideoInfo.new(  iVid.url_video  ) %>			
+		<% if video.available? then %>
+		<li>
+			<a href="/video/<%= iVid.url_publica_video %>" >
+				<img src="http://img.youtube.com/vi/<%= video.video_id %>/0.jpg" id="vid_thub_1_<%= iVid.id %>" class="youtube_thumb thmub<%= iVid.id %>" >
+			    <img src="http://img.youtube.com/vi/<%= video.video_id %>/1.jpg" id="vid_thub_2_<%= iVid.id %>" class="youtube_thumb thmub<%= iVid.id %>" >
+			    <img src="http://img.youtube.com/vi/<%= video.video_id %>/2.jpg" id="vid_thub_3_<%= iVid.id %>" class="youtube_thumb thmub<%= iVid.id %>" >
+			    <img src="http://img.youtube.com/vi/<%= video.video_id %>/3.jpg" id="vid_thub_4_<%= iVid.id %>" class="youtube_thumb thmub<%= iVid.id %>" >
+		      	<br />
+				<i class="<%= iCat.icono_categoria %>"></i><%= iVid.titulo_video %>
+			</a>
+			<script type="text/javascript">
+			var iImagen<%= iVid.id %> = 1;
+			var tTrans<%= iVid.id %> = 500 + Math.random() * 1500;
+			$( document ).ready(function() {
+				setInterval(function () {
+					$('.thmub<%= iVid.id %>').hide();
+					$('#vid_thub_'+iImagen<%= iVid.id %>+'_<%= iVid.id %>').show();
+					iImagen<%= iVid.id %>++;
+					if( iImagen<%= iVid.id %> > 4) iImagen<%= iVid.id %> = 1;
+				}, tTrans<%= iVid.id %>);
+			    
+			});
+			</script>
+		</li>
+		<% end %>
+		<% end %>
+	<% end %>
+</ul>
+<% end %>
+
+<script type="text/javascript">
+$( document ).ready(function() {
+	$(".owl-carousel").owlCarousel({
+		
+		//Basic Speeds
+	    slideSpeed : 200,
+	    paginationSpeed : 800,
+	    rewindSpeed : 1000,
+	 
+	    //Autoplay
+	    autoPlay : true,
+	    stopOnHover : true,
+	 
+	    // Navigation
+	    navigation : true,
+	    navigationText : ["Anterior","Siguiente"],
+	    rewindNav : true,
+	    scrollPerPage : true,
+
+	    //Pagination
+	    pagination : true,
+	    paginationNumbers: true
+	});
+});
+</script>

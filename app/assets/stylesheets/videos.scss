@@ -1,0 +1,34 @@
+// Place all the styles related to the videos controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+#panel_video div {
+  width: 50%; 
+  max-width: 320px;
+  display: inline-block;
+  float: left;
+}
+
+#panel_video div .youtube_thumb {
+  width: 25%;
+}
+#panel_video div #vid_thub_1.youtube_thumb  {
+  width: 100%;
+}
+
+
+
+
+
+@media (max-width: 600px) {
+  #panel_video div {
+    float: none;
+    width: 100%;
+  }
+}
+
+
+
+

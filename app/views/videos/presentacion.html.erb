@@ -1,0 +1,111 @@
+<% video = VideoInfo.new(  @videoGuardado.url_video  ) %>
+
+<style type="text/css">
+
+figure {
+	float: left;
+	width: 30%;
+}
+
+
+figure img {
+	max-width: 100%;
+}
+
+</style>
+
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Virales al Cayeye Banner Horiz 2 Pequeño -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:320px;height:50px"
+     data-ad-client="ca-pub-5163385221124664"
+     data-ad-slot="6646005970"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<article>
+  <figure>
+	<img src="<%= video.thumbnail_large %>" alt="<%= video.title %>" title="<%= video.title %>" >
+	<figcaption><a href="./video/<%= @videoGuardado.url_publica_video %>"><%= video.provider %> - <%= video.title %></a></figcaption>
+  </figure>
+  <h1><%= @videoGuardado.titulo_video %></h1>
+  <p><%= @videoGuardado.desc_video.html_safe %></p>
+
+  <section>
+    <div><iframe src="<%= video.embed_url %>?fs=1" frameborder="0" width="420" height="320" ></iframe></div>
+    <h2><%= video.title %></h2>
+  </section>
+
+
+  <section>
+
+  <a target="_blank" href="./me-gusta/<%= @videoGuardado.url_publica_video %>" style=" height: 90px;" >
+    <%= image_tag "me-gusta.png", style: "height:90px;" %>  
+  </a>
+
+  <a target="_blank" href="./compartir/<%= @videoGuardado.url_publica_video %>" style=" height: 90px; padding: 20px;" >
+    <%= image_tag "compartir-facebook.png", style: "height:60px; vertical-align: bottom; " %>
+  </a>
+
+  <a target="_blank" href="./no-me-gusta/<%= @videoGuardado.url_publica_video %>" style=" height: 90px;" >
+    <%= image_tag "no-me-gusta.png", style: "height:90px;" %>  
+  </a>
+
+  </section>
+
+ 
+    
+</article>
+
+<div style="clear: both;"></div>
+
+<hr />
+
+
+<div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Virales al Cayeye Banner Horiz 2 Pequeño -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:320px;height:50px"
+     data-ad-client="ca-pub-5163385221124664"
+     data-ad-slot="6646005970"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+
+
+<div></div>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-comments" data-href="<%= request.original_url  %>" data-numposts="5" data-colorscheme="light"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

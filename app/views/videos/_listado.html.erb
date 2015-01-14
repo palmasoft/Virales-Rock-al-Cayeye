@@ -1,0 +1,37 @@
+
+<% if not @listado_videos.blank? then %>
+<div id="<%= @id_listado_html  %>" class="owl-carousel" >
+	<% for iVid in @listado_videos %>
+		<% video = VideoInfo.new(  iVid.url_video  ) %>			
+		<% if video.available? then %>
+		<div>
+			<a href="/video/<%= iVid.url_publica_video %>" >
+				<img src="http://img.youtube.com/vi/<%= video.video_id %>/0.jpg" id="<%= @id_listado_html  %>_vid_thub_1_<%= iVid.id %>" class="youtube_thumb <%= @id_listado_html  %>_thmub<%= iVid.id %>" >
+			    <img src="http://img.youtube.com/vi/<%= video.video_id %>/1.jpg" id="<%= @id_listado_html  %>_vid_thub_2_<%= iVid.id %>" class="youtube_thumb <%= @id_listado_html  %>_thmub<%= iVid.id %>" >
+			    <img src="http://img.youtube.com/vi/<%= video.video_id %>/2.jpg" id="<%= @id_listado_html  %>_vid_thub_3_<%= iVid.id %>" class="youtube_thumb <%= @id_listado_html  %>_thmub<%= iVid.id %>" >
+			    <img src="http://img.youtube.com/vi/<%= video.video_id %>/3.jpg" id="<%= @id_listado_html  %>_vid_thub_4_<%= iVid.id %>" class="youtube_thumb <%= @id_listado_html  %>_thmub<%= iVid.id %>" >
+		      	<br />
+				<%= iVid.titulo_video %>
+			</a>
+			<script type="text/javascript">
+			var <%= @id_listado_html  %>_iImagen<%= iVid.id %> = 1;
+			var <%= @id_listado_html  %>_tTrans<%= iVid.id %> = 500 + Math.random() * 1500;
+			$( document ).ready(function() {
+				setInterval(function () {
+					$('.<%= @id_listado_html  %>_thmub<%= iVid.id %>').hide();
+					$('#<%= @id_listado_html  %>_vid_thub_'+<%= @id_listado_html  %>_iImagen<%= iVid.id %>+'_<%= iVid.id %>').show();
+					<%= @id_listado_html  %>_iImagen<%= iVid.id %>++;
+					if( <%= @id_listado_html  %>_iImagen<%= iVid.id %> > 4) <%= @id_listado_html  %>_iImagen<%= iVid.id %> = 1;
+				}, <%= @id_listado_html  %>_tTrans<%= iVid.id %>);
+			    
+			});
+			</script>
+		</div>
+		<% end %>
+	<% end %>
+</div>
+<% end %>
+
+
+
+

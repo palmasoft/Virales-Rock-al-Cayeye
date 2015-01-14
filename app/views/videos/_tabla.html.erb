@@ -1,0 +1,16 @@
+<% if not @tabla_videos.blank? then %>
+<div id="<%= @id_tabla_videos_html  %>" class="tabla-videos " >
+	<% for iVid in @tabla_videos %>
+		<% video = VideoInfo.new(  iVid.url_video  ) %>			
+		<% if video.available? then %>
+		<div>
+			<a href="/video/<%= iVid.url_publica_video %>" >
+				<img src="<%= video.thumbnail_small %>" id="<%= @id_tabla_videos_html  %>_vid_thub_1_<%= iVid.id %>" class="_thumb <%= @id_tabla_videos_html  %>_thmub<%= iVid.id %>" >
+		      	<br />
+				<%= iVid.titulo_video %>
+			</a>
+		</div>
+		<% end %>
+	<% end %>
+</div>
+<% end %>
